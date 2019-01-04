@@ -1,0 +1,3 @@
+export const SET_NUMBER = 'SET_NUMBER'
+
+export const SET_PLAYING_STATE = 'SET_PLAYING_STATE'

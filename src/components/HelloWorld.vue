@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <button @click="go">go</button>
     <button @click="vehicle">vehicle</button>
     <button @click="user">user</button>
     <button @click="users">users</button>
@@ -41,9 +42,11 @@ export default {
       picData: []
     }
   },
-  created () {
-  },
+  created () {},
   methods: {
+    go () {
+      this.$router.push('/test')
+    },
     vehicle () {
       axios.post('/api/vehicle', null).then(res => {
         console.log(res)
@@ -79,7 +82,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
